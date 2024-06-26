@@ -1,0 +1,109 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* nav bar */
+.nav-bar{
+    height: 100px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+/* bar left */
+.bar-left{
+    display: flex;
+    align-items: center;
+}
+.audio-img{
+    width: 80px;
+    height: 80px;
+}
+.stones {
+    width: 100%;
+    object-fit: cover;
+}
+.bar-left > *{
+    padding: 10px;
+}
+.song-bar {
+    width: 200px;
+    height: 2px;
+    background-color: lightgrey;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.audio-bar {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.bar-centre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.audio-buttons > * {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+.volume-bar {
+    width: 100px;
+    height: 2px;
+    background-color: lightgrey;
+}
+.bar-right {
+    display: flex;
+    align-items: center;
+}
+
+.right-sign > * {
+    padding-left: 10px;
+    padding-right: 10px; 
+    color: white;
+}
+.listened-song {
+    width: 70px;
+    height: 2px;
+    background-color: white;
+    position: relative;
+    
+}
+.time-start, .time-stop{
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+}
+.audio-info > h5 {
+     color: white;
+}
+.listened-song:hover {
+    background-color: green;
+}
+
+.listened-song:hover::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background-color:white;
+    border-radius: 50%;
+}
+.audio-info > h6:hover {
+    color: white;
+    text-decoration: underline;
+}
