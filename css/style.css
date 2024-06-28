@@ -17,16 +17,19 @@
 .main-vw {
     height: calc(100vh - 100px);
     display: flex;
+    background-color: rgb(20, 25, 34);
 }
 
 
 /* nav bar */
 .nav-bar {
     height: 100px;
-    background-color: grey;
+    background-color: rgb(40, 40, 40);
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 /* bar left */
@@ -142,15 +145,19 @@
     font-size: 3em;
 }
 
+.audio-folder > * {
+    color: rgb(122, 122, 122);
+}
+.audio-info > h6 {
+    color:  rgb(122, 122, 122) ;
+    
+}
+
 
 
 /* section top */
 
-.spotify-left {
-    width: 200px;
-    height: 100%;
-    background-color: black;
-}
+
 
 .spoty-right {
     width: calc(100% - 200px);
@@ -202,6 +209,7 @@
 
 .main-nav-bar>nav ul li a {
     text-decoration: none;
+    color:  rgb(122, 122, 122) ;
 }
 
 
@@ -238,6 +246,23 @@
 }
 
 /* spoty-left */
+.spotify-left {
+    width: 200px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.left-centre {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: auto;
+}
 
 .left-special {
     color: white;
@@ -258,17 +283,18 @@
     padding: 15px
 }
 
-.crea-playlist > * {
+.crea-playlist {
     color: white;
-    display: inline-block;
-}
-.plus {
+    display: flex;
     padding-left: 15px;
 }
+
 .last-list {
     color: white;
     padding-left: 15px;
     list-style-type: none;
+    flex-grow: 1;
+    overflow: auto;
 
 }
 .last-list > ul li {
@@ -277,6 +303,31 @@
     margin-top: 10px;
     margin-bottom: 10px;
 
+}
+.left-nav > * {
+    color:  rgb(122, 122, 122) ;
+}
+
+.left-nav > *:hover {
+    color:  white ;
+}
+.left-user > i{
+    display: inline-block;
+}
+.left-user > p{
+    display: inline-block;
+}
+.left-user > h4{
+    display: inline-block;
+}
+.left-user > hr{
+    margin-top: 5px;
+    margin-bottom: 5px ;
+    width: 80%;
+    margin-left: 20px;
+}
+.left-user {
+    padding-left: 15px;
 }
 
 
