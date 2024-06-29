@@ -20,7 +20,7 @@
     background-color: rgb(20, 25, 34);
 }
 
-
+/* footer */
 /* nav bar */
 .nav-bar {
     height: 100px;
@@ -46,6 +46,14 @@
 .stones {
     width: 100%;
     object-fit: cover;
+}
+.audio-info > a {
+    color:  rgb(122, 122, 122);
+    text-decoration: none;
+}
+.audio-info > a:hover {
+    color:  white;
+    text-decoration: none;
 }
 
 .bar-left>* {
@@ -173,21 +181,36 @@
     text-align: right;
     position: sticky;
     top: 0;
-    padding: 25px;
+    position: sticky;
+    z-index: 1;
+    
 
 }
-
-.logo {
-    height: 70px;
-    width: 100px;
+.upgrade {
+    color: white;
+    background-color:rgb(20, 25, 34) ;
+    border-color: white;
+    border-radius: 15px;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.upgrade-container {
+    padding: 15px 15px; 
+    border-color: white;
+    display: inline-block; 
 }
 
-.logo-spoty {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-
+.upgrade:hover {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
+
+
 
 
 /* navigation bar */
@@ -211,6 +234,10 @@
     text-decoration: none;
     color:  rgb(122, 122, 122) ;
 }
+.main-nav-bar > nav ul li a:hover {
+    text-decoration: none;
+    color:  white;
+}
 
 
 /* recently played */
@@ -233,16 +260,64 @@
     object-fit: contain;
 }
 
+.special-movie {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 15px
+}
+.special-movie > i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.special-movie:hover > i{
+    
+    opacity: 1; 
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0); 
+    transition: opacity 0.3s ease; 
+}
+.overlay:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: opacity 0.3s ease; 
+}
+
+
+
+
 .container > p {
     margin-bottom: 15px;
+    color:  rgb(122, 122, 122) ;
     
 }
 .info {
     text-align: center;
+    color: white;
+}
+.info > p {
+    
+    color:  rgb(122, 122, 122) ;
 }
 
 .container > h2 {
     margin-top: 15px;
+    margin-bottom: 15px;
+    color: white;
 }
 
 /* spoty-left */
@@ -251,17 +326,41 @@
     background-color: black;
     display: flex;
     flex-direction: column;
+    height: 100%;
 }
 .left-nav {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    overflow: hidden;
+}
+.left-top, .left-bottom {
+    flex-shrink: 0; 
+}
+
+.logo {
+    height: 70px;
+    width: 100px;
+    padding-top: 15px;
+}
+
+.logo-spoty {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+.logo-small {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: none;
 }
 .left-centre {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 .left-special {
@@ -278,23 +377,36 @@
     
     margin-bottom: 10px;
 }
+.fa-ul > li a  {
+    
+    color: rgb(122, 122, 122) ;
+    text-decoration: none;
+}
+
+.fa-ul > li a:hover  {
+    
+    color: white ;
+    text-decoration: none;
+}
 .crea > h4 {
     color: white;
     padding: 15px
 }
 
 .crea-playlist {
-    color: white;
+    color:  rgb(122, 122, 122) ;
     display: flex;
     padding-left: 15px;
 }
 
+
 .last-list {
+    display: flex;
     color: white;
     padding-left: 15px;
     list-style-type: none;
     flex-grow: 1;
-    overflow: auto;
+    overflow: hidden;
 
 }
 .last-list > ul li {
@@ -302,32 +414,89 @@
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
+    
 
 }
-.left-nav > * {
+.last-list > ul li a {
+    
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
     color:  rgb(122, 122, 122) ;
+    
+
+}
+.last-list > ul li a:hover {
+    
+    list-style-type: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+
+}
+.last-list > ul {
+    flex: 1;
+    overflow: auto;
+
+
 }
 
-.left-nav > *:hover {
-    color:  white ;
-}
-.left-user > i{
+.left-user > i,
+.left-user > a,
+.left-user > h4 {
     display: inline-block;
 }
-.left-user > p{
-    display: inline-block;
-}
-.left-user > h4{
-    display: inline-block;
-}
-.left-user > hr{
+.left-user > hr {
     margin-top: 5px;
-    margin-bottom: 5px ;
+    margin-bottom: 5px;
     width: 80%;
     margin-left: 20px;
 }
 .left-user {
     padding-left: 15px;
+    margin-bottom: 10px;
+}
+.left-user > h4 {
+    color: rgb(122, 122, 122) ;
+    
+}
+.left-user > a {
+    color: rgb(122, 122, 122) ;
+    text-decoration: none;
+}
+
+.left-user > i {
+    color: rgb(122, 122, 122) ;
+    
+}
+.left-user:hover a{
+    color: white;
+    text-decoration: none;
+}
+.left-user:hover a,
+.left-user:hover i:first-of-type {
+    color: white;
+    text-decoration: none;
+}
+
+
+.add-playlist {
+    display: flex;
+    align-items: center;
+}
+.add-playlist > a {
+    margin-left: 5px;
+    color: rgb(122, 122, 122)  ;
+    text-decoration: none;
+}
+.add-playlist > button {
+    color: rgb(122, 122, 122) ;
+}
+.add-playlist > a:hover {
+    margin-left: 5px;
+    color:white  ;
+    text-decoration: none;
 }
 
 
