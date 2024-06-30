@@ -34,8 +34,10 @@
 
 /* bar left */
 .bar-left {
+
     display: flex;
     align-items: center;
+    flex-grow: 1;
 }
 
 .audio-img {
@@ -47,12 +49,14 @@
     width: 100%;
     object-fit: cover;
 }
-.audio-info > a {
-    color:  rgb(122, 122, 122);
+
+.audio-info>a {
+    color: rgb(122, 122, 122);
     text-decoration: none;
 }
-.audio-info > a:hover {
-    color:  white;
+
+.audio-info>a:hover {
+    color: white;
     text-decoration: none;
 }
 
@@ -60,49 +64,70 @@
     padding: 10px;
 }
 
-.song-bar {
-    width: 200px;
-    height: 2px;
-    background-color: lightgrey;
+.bar-centre {
+   
     display: flex;
-    padding: 0;
-    margin: 0;
+    flex-grow: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.audio-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
 }
 
 .audio-bar {
+    width: 100%;
     display: flex;
     align-items: center;
+    flex-grow: 1;
     padding: 0;
     margin: 0;
 }
 
-.bar-centre {
+.song-bar {
+    width: 100%;
+    height: 2px;
+    background-color: lightgrey;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-grow: 1;
+    padding: 0;
+    margin: 0;
 }
 
+
+
+
+
 .audio-buttons>* {
-    padding-left: 10px;
-    padding-right: 10px;
     color: white;
 }
 
 .volume-bar {
-    width: 100px;
+    width: 50%;
     height: 2px;
     background-color: lightgrey;
 }
 
 .bar-right {
+    flex-grow: 1;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
 }
 
 .right-sign>* {
     padding-left: 10px;
     padding-right: 10px;
     color: white;
+}
+.right-sign {
+    width: 50%;
 }
 
 .listened-song {
@@ -153,12 +178,13 @@
     font-size: 3em;
 }
 
-.audio-folder > * {
+.audio-folder>* {
     color: rgb(122, 122, 122);
 }
-.audio-info > h6 {
-    color:  rgb(122, 122, 122) ;
-    
+
+.audio-info>h6 {
+    color: rgb(122, 122, 122);
+
 }
 
 
@@ -183,12 +209,13 @@
     top: 0;
     position: sticky;
     z-index: 1;
-    
+
 
 }
+
 .upgrade {
     color: white;
-    background-color:rgb(20, 25, 34) ;
+    background-color: rgb(20, 25, 34);
     border-color: white;
     border-radius: 15px;
     display: inline-block;
@@ -197,10 +224,11 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
 .upgrade-container {
-    padding: 15px 15px; 
+    padding: 15px 15px;
     border-color: white;
-    display: inline-block; 
+    display: inline-block;
 }
 
 .upgrade:hover {
@@ -215,10 +243,11 @@
 
 /* navigation bar */
 
-.main-nav-bar{
+.main-nav-bar {
     margin-bottom: 20px;
 }
-.main-nav-bar > nav ul {
+
+.main-nav-bar>nav ul {
     display: flex;
     justify-content: center;
 }
@@ -232,11 +261,12 @@
 
 .main-nav-bar>nav ul li a {
     text-decoration: none;
-    color:  rgb(122, 122, 122) ;
+    color: rgb(122, 122, 122);
 }
-.main-nav-bar > nav ul li a:hover {
+
+.main-nav-bar>nav ul li a:hover {
     text-decoration: none;
-    color:  white;
+    color: white;
 }
 
 
@@ -265,56 +295,62 @@
     display: inline-block;
     margin-bottom: 15px
 }
-.special-movie > i {
+
+.special-movie>i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    opacity: 0; 
+    opacity: 0;
     transition: opacity 0.3s ease;
 }
-.special-movie:hover > i{
-    
-    opacity: 1; 
+
+.special-movie:hover>i {
+
+    opacity: 1;
 }
+
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.0); 
-    transition: opacity 0.3s ease; 
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: opacity 0.3s ease;
 }
+
 .overlay:hover {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    transition: opacity 0.3s ease; 
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease;
 }
 
 
 
 
-.container > p {
+.container>p {
     margin-bottom: 15px;
-    color:  rgb(122, 122, 122) ;
-    
+    color: rgb(122, 122, 122);
+
 }
+
 .info {
     text-align: center;
     color: white;
 }
-.info > p {
-    
-    color:  rgb(122, 122, 122) ;
+
+.info>p {
+
+    color: rgb(122, 122, 122);
 }
 
-.container > h2 {
+.container>h2 {
     margin-top: 15px;
     margin-bottom: 15px;
     color: white;
@@ -328,14 +364,17 @@
     flex-direction: column;
     height: 100%;
 }
+
 .left-nav {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
 }
-.left-top, .left-bottom {
-    flex-shrink: 0; 
+
+.left-top,
+.left-bottom {
+    flex-shrink: 0;
 }
 
 .logo {
@@ -350,12 +389,14 @@
     object-fit: contain;
 
 }
+
 .logo-small {
     width: 100%;
     height: 100%;
     object-fit: contain;
     display: none;
 }
+
 .left-centre {
     display: flex;
     flex-direction: column;
@@ -368,33 +409,37 @@
     padding: 20px;
 
 }
-.left-special > .fa-li i {
+
+.left-special>.fa-li i {
     color: white;
     padding: 10px;
-    
+
 }
-.fa-ul > li  {
-    
+
+.fa-ul>li {
+
     margin-bottom: 10px;
 }
-.fa-ul > li a  {
-    
-    color: rgb(122, 122, 122) ;
+
+.fa-ul>li a {
+
+    color: rgb(122, 122, 122);
     text-decoration: none;
 }
 
-.fa-ul > li a:hover  {
-    
-    color: white ;
+.fa-ul>li a:hover {
+
+    color: white;
     text-decoration: none;
 }
-.crea > h4 {
+
+.crea>h4 {
     color: white;
     padding: 15px
 }
 
 .crea-playlist {
-    color:  rgb(122, 122, 122) ;
+    color: rgb(122, 122, 122);
     display: flex;
     padding-left: 15px;
 }
@@ -409,71 +454,81 @@
     overflow: hidden;
 
 }
-.last-list > ul li {
-    
+
+.last-list>ul li {
+
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
-    
+
 
 }
-.last-list > ul li a {
-    
+
+.last-list>ul li a {
+
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
     text-decoration: none;
-    color:  rgb(122, 122, 122) ;
-    
+    color: rgb(122, 122, 122);
+
 
 }
-.last-list > ul li a:hover {
-    
+
+.last-list>ul li a:hover {
+
     list-style-type: none;
     margin-top: 10px;
     margin-bottom: 10px;
     color: white;
 
 }
-.last-list > ul {
+
+.last-list>ul {
     flex: 1;
     overflow: auto;
 
 
 }
 
-.left-user > i,
-.left-user > a,
-.left-user > h4 {
+.left-user>i,
+.left-user>a,
+.left-user>h4 {
     display: inline-block;
 }
-.left-user > hr {
+
+.left-user>hr {
     margin-top: 5px;
     margin-bottom: 5px;
     width: 80%;
     margin-left: 20px;
 }
+
 .left-user {
     padding-left: 15px;
     margin-bottom: 10px;
 }
-.left-user > h4 {
-    color: rgb(122, 122, 122) ;
-    
+
+.left-user>h4 {
+    color: rgb(122, 122, 122);
+
 }
-.left-user > a {
-    color: rgb(122, 122, 122) ;
+
+.left-user>a {
+    color: rgb(122, 122, 122);
     text-decoration: none;
 }
 
-.left-user > i {
-    color: rgb(122, 122, 122) ;
-    
+.left-user>i {
+    color: rgb(122, 122, 122);
+
 }
-.left-user:hover a{
+
+.left-user:hover a {
     color: white;
     text-decoration: none;
 }
+
 .left-user:hover a,
 .left-user:hover i:first-of-type {
     color: white;
@@ -485,19 +540,19 @@
     display: flex;
     align-items: center;
 }
-.add-playlist > a {
+
+.add-playlist>a {
     margin-left: 5px;
-    color: rgb(122, 122, 122)  ;
-    text-decoration: none;
-}
-.add-playlist > button {
-    color: rgb(122, 122, 122) ;
-}
-.add-playlist > a:hover {
-    margin-left: 5px;
-    color:white  ;
+    color: rgb(122, 122, 122);
     text-decoration: none;
 }
 
+.add-playlist>button {
+    color: rgb(122, 122, 122);
+}
 
-
+.add-playlist>a:hover {
+    margin-left: 5px;
+    color: white;
+    text-decoration: none;
+}
