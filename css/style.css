@@ -65,7 +65,7 @@
 }
 
 .bar-centre {
-   
+
     display: flex;
     flex-grow: 2;
     flex-direction: column;
@@ -126,6 +126,7 @@
     padding-right: 10px;
     color: white;
 }
+
 .right-sign {
     width: 50%;
 }
@@ -250,6 +251,7 @@
 .main-nav-bar>nav ul {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .main-nav-bar>nav ul li {
@@ -555,4 +557,75 @@
     margin-left: 5px;
     color: white;
     text-decoration: none;
+}
+
+/* responsive */
+/* first-step */
+@media screen and (max-width:1100px) {
+    .card {
+        width: calc(25% - 20px);
+        margin: 0 10px;
+    }
+}
+
+/* second-step */
+@media screen and (max-width:700px) {
+    .card {
+        width: calc(50% - 20px);
+        margin: 0 10px;
+    }
+}
+
+/* third-step */
+@media screen and (max-width:600px) {
+    .spoty-right {
+        width: calc(100% - 50px);
+        overflow-y: auto;
+
+    }
+
+    .spotify-left {
+        width: 50px;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .logo-spoty {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: none;
+
+    }
+
+    .logo {
+        height: 35px;
+        width: 50px;
+        padding-top: 15px;
+    }
+
+    .logo-small {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+
+    }
+
+    .left-centre {
+
+        visibility: hidden;
+
+    }
+
+    .left-bottom .left-user a,
+    .left-bottom .left-user h4,
+    .left-bottom .left-user hr {
+        display: none;
+    }
+    
+
+
 }
